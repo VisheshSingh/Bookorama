@@ -9,6 +9,7 @@
  })
  */
 
+ //Delete Books
  const list = document.querySelector('#book-list ul');
 
  list.addEventListener('click', function(e) {
@@ -16,4 +17,14 @@
          const li = e.target.parentElement;
          list.removeChild(li);
      }
+ })
+
+ // ADD BOOKS
+
+ const addBooks = document.forms['add-book'];
+
+ addBooks.addEventListener('submit', function(e) {
+     e.preventDefault();
+     const book = addBooks.querySelector('input[type="text"]').value;
+     console.log(book);
  })

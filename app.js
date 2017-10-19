@@ -31,9 +31,15 @@
      const li = document.createElement('li');
      const bookName = document.createElement('span');
      const delBtn = document.createElement('span');
+
     //Append content
     delBtn.textContent = 'delete';
     bookName.textContent = book;
+
+    //Add class
+    bookName.classList.add('name');
+    delBtn.classList.add('delete');
+
      //append to DOM
      li.appendChild(bookName);
      li.appendChild(delBtn);

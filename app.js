@@ -26,5 +26,17 @@
  addBooks.addEventListener('submit', function(e) {
      e.preventDefault();
      const book = addBooks.querySelector('input[type="text"]').value;
-     console.log(book);
+     
+     //create elements
+     const li = document.createElement('li');
+     const bookName = document.createElement('span');
+     const delBtn = document.createElement('span');
+    //Append content
+    delBtn.textContent = 'delete';
+    bookName.textContent = book;
+     //append to DOM
+     li.appendChild(bookName);
+     li.appendChild(delBtn);
+
+     list.appendChild(li);
  })
